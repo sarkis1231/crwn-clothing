@@ -4,13 +4,13 @@ import 'firebase/auth';
 
 
 const config = {
-    apiKey: "AIzaSyCN6TdFbXkZl0TmpHUJJCPAL-ESDEAN6To",
-    authDomain: "old-ashtarak.firebaseapp.com",
-    databaseURL: "https://old-ashtarak.firebaseio.com",
-    projectId: "old-ashtarak",
-    storageBucket: "old-ashtarak.appspot.com",
-    messagingSenderId: "106430767200",
-    appId: "1:106430767200:web:41d47e198185c7eefee305"
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: ""
 };
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
