@@ -20,7 +20,6 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
     const userRef = firestore.doc(`users/${userAuth.uid}`);
     const respons = await userRef.get();
 
-    console.log(respons);
 
     if (!respons.exists) {
         const { displayName, email } = userAuth;
