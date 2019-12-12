@@ -6,8 +6,8 @@ import './checkOutPage.scss';
 
 
 const CheckOutPage = ({ cartItems, totalPrice }) => {
-    console.log(totalPrice)
-    cartItems.length ? cartItems.map(item => console.log(item.id)) : console.log(null)
+
+
     return (
         <div className='checkout-page'>
             <div className='checkout-header'>
@@ -28,8 +28,8 @@ const CheckOutPage = ({ cartItems, totalPrice }) => {
                 </div>
             </div>
             {
-                cartItems.length ? cartItems.map(item => (
-                    <CheckOutItem key={item.id} {...item} />
+                cartItems.length ? cartItems.map(cartItem => (
+                    <CheckOutItem key={cartItem.id} cartItem={cartItem} />
                 )) : (<h1>No Items to show</h1>)
             }
             <div className='total'>
