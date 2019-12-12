@@ -1,7 +1,6 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
-import dotenv from 'dotenv';
 import { API } from '../config'
 
 
@@ -14,8 +13,7 @@ const config = {
     messagingSenderId: "106430767200",
     appId: "1:106430767200:web:41d47e198185c7eefee305"
 };
-dotenv.config();
-console.log(process.env.REACT_APP_API)
+
 export const createUserProfileDocument = async (userAuth, additionalData) => {
 
     if (!userAuth) return;

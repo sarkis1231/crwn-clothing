@@ -1,1 +1,1 @@
-export const API = 'AIzaSyCN6TdFbXkZl0TmpHUJJCPAL-ESDEAN6To'
+export const API = 'AIzaSyCN6TdFbXkZl0TmpHUJJCPAL-ESDEAN6To';

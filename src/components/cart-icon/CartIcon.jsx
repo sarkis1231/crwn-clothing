@@ -8,15 +8,21 @@ import './cartIcon.scss';
 
 
 
-const CartIcon = ({ toggleCartHidden }) => {
+const CartIcon = ({ toggleCartHidden, itemCount }) => {
 
+    console.log(itemCount)
     return (
         <div className='cart-icon' onClick={toggleCartHidden}>
             <ShoppingIcon className='shopping-icon' />
-            <span className='item-count'>0</span>
+            <span className='item-count' >{itemCount}</span>
         </div>
     )
 
 }
 
-export default connect(null, { toggleCartHidden })(CartIcon);
+const mapStateToProps = ({ cart: { cartItems } }) => ({
+    itemCount: cartItems.reduce(
+        (accumaltedQuantity, cartItem) => accumaltedQuantity + cartItem.quantity, 0)
+})
+
+export default connect(mapStateToProps, { toggleCartHidden })(CartIcon);

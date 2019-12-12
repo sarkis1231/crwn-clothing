@@ -15,7 +15,6 @@ const Header = ({ currentUser, hidden }) => {
 
 
 
-
     return (
 
         <div className='header'>
@@ -50,7 +49,7 @@ const Header = ({ currentUser, hidden }) => {
 
 const MapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
     currentUser,
-    hidden
+    hidden,
 
 })
 
