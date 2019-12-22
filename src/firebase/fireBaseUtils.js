@@ -1,11 +1,10 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
-import { API } from '../config'
 
 
 const config = {
-    apiKey: `${API}`,
+    apiKey: "AIzaSyCN6TdFbXkZl0TmpHUJJCPAL-ESDEAN6To",
     authDomain: "old-ashtarak.firebaseapp.com",
     databaseURL: "https://old-ashtarak.firebaseio.com",
     projectId: "old-ashtarak",

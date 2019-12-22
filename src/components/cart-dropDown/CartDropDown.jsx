@@ -13,9 +13,9 @@ const CartDropDown = ({ cartItems, history, toggleCartHidden }) => {
     const handleClick = () => {
         history.push('/checkout');
         toggleCartHidden();
-    }
+    };
 
-    console.log(history)
+    console.log(history);
     return (
         <div className='cart-dropdown'>
             <div className='cart-items'>
@@ -23,17 +23,17 @@ const CartDropDown = ({ cartItems, history, toggleCartHidden }) => {
                     cartItems.length ?
                         cartItems.map(cartItem => <CartItem key={cartItem.id} item={cartItem} />)
                         :
-                        (<span className='empty-message'>Your cart id empty</span>)
+                        (<span className='empty-message'>Your cart is empty</span>)
                 }
             </div>
             <CustomButton onClick={handleClick}>GO TO CHECKOUT</CustomButton>
         </div>
     )
-}
+};
 
 
 const mapStatetoProps = ({ cart: { cartItems } }) => ({
     cartItems
-})
+});
 
 export default withRouter(connect(mapStatetoProps, { toggleCartHidden })(CartDropDown));
